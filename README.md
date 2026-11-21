@@ -17,14 +17,33 @@ Beta: tested on one Samsung Galaxy Watch5 (Wear OS 6). Report problems to the Cy
 
 ## Will it work on my watch?
 
-| Watch | Works? |
-|---|---|
-| Galaxy Watch4, 5, 6, 7, 8, Ultra, FE (Wear OS) | Yes (needs GPS: all of these have it) |
-| Google Pixel Watch, TicWatch Pro 3/5, Fossil Gen 6 and other **Wear OS 3+** watches with GPS | Should, untested |
-| Galaxy Watch 3, Active 2, Gear (Tizen), Apple Watch, Garmin, Coros, Polar, Suunto, Amazfit, Huawei, Xiaomi, Fitbit | **No**: not Wear OS |
+Cyclone-Wearable needs a **Wear OS 3 or newer** watch **with GPS** and Wi-Fi (for installing). Fitness bands
+(Galaxy Fit, Xiaomi / Mi Band, Fitbit Charge, Huawei Band, Amazfit Band) don't run Wear OS.
 
-Not Wear OS? If your watch has a "broadcast heart rate" setting (Garmin, Coros, Polar, Suunto, some Amazfit and
+| Brand | Watches | Wear OS | Install method (see below) | Tested |
+|---|---|---|---|---|
+| Samsung | Galaxy Watch4, Watch4 Classic | 3 → updated to 4/5/6 | **B** (after the update) or **A** (still on Wear OS 3) | |
+| Samsung | Galaxy Watch5, Watch5 Pro | 3.5 → 4/5/6 | **B** | ✓ Watch5 44 mm, Wear OS 6 |
+| Samsung | Galaxy Watch6, Watch6 Classic, Watch7, Watch Ultra, Watch FE, Watch8, Watch8 Classic | 4 and newer | **B** | |
+| Google | Pixel Watch, Pixel Watch 2, 3, 4 | 3.5 → 4/5/6 | **B** | |
+| Mobvoi | TicWatch Pro 5, Pro 5 Enduro, TicWatch 5 Pro, Atlas | 3 → 4 | **A** (Wear OS 3) or **B** (Wear OS 4+) | |
+| Mobvoi | TicWatch Pro 3 Ultra (GPS model) | 3 | **A** | |
+| OnePlus | Watch 2, Watch 2R, Watch 3 | 4 and newer | **B** | |
+| Xiaomi | Watch 2, Watch 2 Pro | 3 → 4 | **A** or **B** | |
+| Oppo | Watch X | 4 | **B** | |
+| Fossil / Skagen | Fossil Gen 6, Skagen Falster Gen 6 (after their Wear OS 3 update) | 3 | **A** | |
+| Montblanc | Summit 3 | 3 | **A** | |
+
+Which method? Look at **Settings → Developer options** on the watch:
+**Wireless debugging** with *Pair new device* = method **B**; **Debug over Wi-Fi** showing `IP:5555` = method **A**.
+Not sure of your Wear OS version? **Settings → About watch → Software information** (or *Versions*).
+
+**Won't work** (not Wear OS, or too old): Galaxy Watch 3, Watch Active / Active 2, Gear (Tizen); Wear OS 2 watches
+(Fossil Gen 5 and older, TicWatch Pro 3 not updated); Apple Watch; Garmin; Coros; Polar; Suunto; Amazfit; Huawei;
+Fitbit; Xiaomi / Mi Band. If your watch can **broadcast heart rate** (Garmin, Coros, Polar, Suunto, some Amazfit and
 Huawei), Cyclone on the phone already pairs it as a heart-rate sensor: Cyclone → Sensors → Heart rate → Pair.
+
+Only the Galaxy Watch5 has been tested; the others meet the requirements. Tell the tester group how it goes.
 
 **Versions**: Cyclone-Wearable carries the same version and codename as the Cyclone phone app it ships with
 (first: **0.18.0 "Vulcan"**). Keep both on the same version. Sending rides from the watch to the phone and
@@ -33,34 +52,51 @@ still records and works as an HR strap.
 
 ## Install (one time, about 10 minutes)
 
-The app is not on the Play Store, so it is installed over the watch's Wi-Fi debugging.
+The app is not on the Play Store, so it is installed over the watch's Wi-Fi debugging. None of these watches
+take an app over the charging cable.
 
-### 1. Turn on debugging on the watch
+### 1. Turn on developer mode on the watch
 
-1. Watch: **Settings → About watch → Software information**, tap **Software version** repeatedly until
-   it says "Developer mode turned on" (5–7 taps).
-2. **Settings → Developer options**: turn on **ADB debugging** and **Wireless debugging** (OK the prompts).
-3. Keep the watch on the **same Wi-Fi** as the phone or PC, on its charger, screen awake on the Wireless
-   debugging page. It shows the watch's **IP address and port**, e.g. `192.168.1.10:40123`.
+1. Watch: **Settings → About watch → Software information** (Pixel / TicWatch / Fossil: **System → About**),
+   tap **Software version** (or **Build number**) repeatedly until it says developer mode is on (5–7 taps).
+2. **Settings → Developer options**: turn on **ADB debugging**.
+3. Put the watch on the **same Wi-Fi** as the phone or PC (Settings → Connections / Connectivity → Wi-Fi), keep
+   it **on its charger** (many watches switch Wi-Fi off when idle) and the screen awake.
 
-### 2a. Install from the phone (no PC)
+### 2. Connect and install
 
-1. Download **cyclone-wearable.apk** from the latest release:
-   https://github.com/zakusworo/cyclone-wearable/releases/latest
-2. Install a phone app that installs APKs on a Wear OS watch over Wi-Fi debugging, for example
-   **Bugjaeger Mobile ADB** or **Wear Installer 2** (Play Store).
-3. Pair it with the watch: on the watch, **Wireless debugging → Pair new device** shows a **pairing code** and
-   a **pairing port**; enter both in the phone app. Then connect with the IP and port from the main Wireless
-   debugging page.
-4. In the phone app, pick **cyclone-wearable.apk** and install. "Success" = done.
+Download **cyclone-wearable.apk** first: https://github.com/zakusworo/cyclone-wearable/releases/latest
 
-### 2b. Install from a PC
+#### Method A: Wear OS 3 ("Debug over Wi-Fi", port 5555)
 
-```
-adb pair 192.168.1.10:PAIRING_PORT PAIRING_CODE      # from "Pair new device"
-adb connect 192.168.1.10:PORT                         # from the main Wireless debugging page
-adb install cyclone-wearable.apk
-```
+1. Watch: **Developer options → Debug over Wi-Fi** on. Note the address, e.g. `192.168.1.10:5555`.
+2. **From the phone:** in an installer app (**Bugjaeger Mobile ADB**, **Wear Installer 2** or **GeminiMan
+   WearOS Manager**, Play Store) enter the IP and port `5555`, connect, **allow** the prompt on the watch
+   ("Allow debugging?" → Always allow), then pick **cyclone-wearable.apk** and install.
+3. **Or from a PC:**
+   ```
+   adb connect 192.168.1.10:5555      # allow the prompt on the watch
+   adb install cyclone-wearable.apk
+   ```
+
+#### Method B: Wear OS 4 and newer ("Wireless debugging", pairing code)
+
+1. Watch: **Developer options → Wireless debugging** on. Its page shows the watch's **IP and port**, e.g.
+   `192.168.1.10:40123` (the port changes each time it is switched on).
+2. Watch: **Wireless debugging → Pair new device**: it shows a **6-digit pairing code** and a **pairing port**
+   (different from the port above).
+3. **From the phone:** in the installer app choose *pair* / *wireless debugging pairing*, enter the IP, pairing port
+   and code; then connect with the IP and the port from step 1; pick **cyclone-wearable.apk** and install.
+   (Pick an installer updated for pairing codes: older ones only know method A and fail here.)
+4. **Or from a PC:**
+   ```
+   adb pair 192.168.1.10:PAIRING_PORT PAIRING_CODE    # from "Pair new device"
+   adb connect 192.168.1.10:PORT                       # from the main Wireless debugging page
+   adb install cyclone-wearable.apk
+   ```
+
+"Success" = done. If it can't connect: same Wi-Fi? watch awake on the debugging page? Wi-Fi on the watch really
+on (not only Bluetooth)? Try again right after switching debugging on.
 
 ### 3. Turn debugging off again
 
