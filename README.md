@@ -17,8 +17,10 @@ Beta: tested on one Samsung Galaxy Watch5 (Wear OS 6). Report problems to the Cy
 Not Wear OS? If your watch has a "broadcast heart rate" setting (Garmin, Coros, Polar, Suunto, some Amazfit and
 Huawei), Cyclone on the phone already pairs it as a heart-rate sensor: Cyclone → Sensors → Heart rate → Pair.
 
-**Phone side**: sending rides from the watch to the phone and courses from the phone to the watch need a Cyclone
-beta newer than 0.17.0 (the next release). Without it the watch still records and works as an HR strap.
+**Versions**: Cyclone-Wearable carries the same version and codename as the Cyclone phone app it ships with
+(first: **0.18.0 "Vulcan"**). Keep both on the same version. Sending rides from the watch to the phone and
+courses from the phone to the watch need Cyclone **0.18.0 or newer** on the phone; with an older Cyclone the watch
+still records and works as an HR strap.
 
 ## Install (one time, about 10 minutes)
 
