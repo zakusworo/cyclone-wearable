@@ -139,8 +139,14 @@ ride stays visible, dimmed.
 
 ## Updating
 
-Install the new **cyclone-wearable.apk** the same way. Rides, settings and maps stay (each release is signed with
-the same key).
+**From the next version on (0.18.1+), the watch updates itself:** it checks for a new version every few hours
+(and when you open the app) over its Wi-Fi or the phone's connection, shows a notification, and the home screen's
+bottom line turns green ("⬆ Update … available"). Tap it → **Update** → the first time, switch on **Install unknown
+apps** for Cyclone-Wearable (the watch opens that setting) → confirm Android's **Update** prompt. Rides, settings
+and maps stay. Cyclone on the phone (0.18.1+) also tells you when the watch app is older than the phone app.
+
+**0.18.0** has no updater yet: install the next version once the same way as the first install; from then on it
+updates by itself.
 
 ## Uninstall
 

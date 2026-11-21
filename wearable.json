@@ -1,0 +1,15 @@
+{
+  "latest": {
+    "versionCode": 37,
+    "versionName": "0.18.0",
+    "codename": "Vulcan",
+    "minSdk": 30,
+    "date": "2026-11-21",
+    "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.18.0/cyclone-wearable.apk",
+    "size": 7645773,
+    "sha256": "5c542529e02f9e9d21c1514c17b3f98a01b9987e8913782bc0b2cdb77f561e8d",
+    "notes": [
+      "First release: rides on the watch alone, map, elevation, stops ahead, turn cues, HR strap mode."
+    ]
+  }
+}
