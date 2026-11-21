@@ -6,6 +6,15 @@ course from the Cyclone phone app, and can also act as a Bluetooth heart-rate st
 
 Beta: tested on one Samsung Galaxy Watch5 (Wear OS 6). Report problems to the Cyclone tester group.
 
+## Screenshots (Galaxy Watch5)
+
+| | | | |
+|---|---|---|---|
+| <img src="screenshots/01-home.png" width="180"><br>Home | <img src="screenshots/02-home-tiles.png" width="180"><br>Week goal, tiles | <img src="screenshots/04-countdown.png" width="180"><br>Start countdown | <img src="screenshots/05-ride.png" width="180"><br>Ride |
+| <img src="screenshots/06-map.png" width="180"><br>Offline map + course | <img src="screenshots/07-elevation.png" width="180"><br>Elevation | <img src="screenshots/08-ahead.png" width="180"><br>Stops ahead | <img src="screenshots/09-heart.png" width="180"><br>Heart rate |
+| <img src="screenshots/10-controls.png" width="180"><br>Controls | <img src="screenshots/11-paused.png" width="180"><br>Paused | <img src="screenshots/12-finish.png" width="180"><br>Finish: Save / Discard | <img src="screenshots/03-history.png" width="180"><br>History |
+| <img src="screenshots/13-options.png" width="180"><br>Options | <img src="screenshots/15-hr-strap.png" width="180"><br>HR strap for the phone |
+
 ## Will it work on my watch?
 
 | Watch | Works? |
