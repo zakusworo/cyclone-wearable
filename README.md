@@ -46,7 +46,7 @@ Huawei), Cyclone on the phone already pairs it as a heart-rate sensor: Cyclone �
 Only the Galaxy Watch5 has been tested; the others meet the requirements. Tell the tester group how it goes.
 
 **Versions**: Cyclone-Wearable carries the same version and codename as the Cyclone phone app it ships with
-(first: **0.18.0 "Vulcan"**). Keep both on the same version. Sending rides from the watch to the phone and
+(first: **0.18.0 "Vulcan"**, now **0.19.0 "Khyber Pass"**). Keep both on the same version. Sending rides from the watch to the phone and
 courses from the phone to the watch need Cyclone **0.18.0 or newer** on the phone; with an older Cyclone the watch
 still records and works as an HR strap.
 
@@ -143,9 +143,9 @@ ride stays visible, dimmed.
 (and when you open the app) over its Wi-Fi or the phone's connection, shows a notification, and the home screen's
 bottom line turns green ("⬆ Update … available"). Tap it → **Update** → the first time, switch on **Install unknown
 apps** for Cyclone-Wearable (the watch opens that setting) → confirm Android's **Update** prompt. Rides, settings
-and maps stay. Cyclone on the phone (0.18.1+) also tells you when the watch app is older than the phone app.
+and maps stay. Cyclone on the phone (0.19.0+) also tells you when the watch app is older than the phone app.
 
-**0.18.0** has no updater yet: install the next version once the same way as the first install; from then on it
+**0.18.0** has no updater: install 0.19.0 once the same way as the first install; from then on it
 updates by itself.
 
 ## Uninstall

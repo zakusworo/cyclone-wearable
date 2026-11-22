@@ -1,15 +1,17 @@
 {
   "latest": {
-    "versionCode": 37,
-    "versionName": "0.18.0",
-    "codename": "Vulcan",
+    "versionCode": 38,
+    "versionName": "0.19.0",
+    "codename": "Khyber Pass",
     "minSdk": 30,
-    "date": "2026-11-21",
-    "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.18.0/cyclone-wearable.apk",
-    "size": 7645981,
-    "sha256": "5c542529e02f9e9d21c1514c17b3f98a01b9987e8913782bc0b2cdb77f561e8d",
+    "date": "2026-11-22",
+    "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.19.0/cyclone-wearable.apk",
+    "size": 7666853,
+    "sha256": "4ae0e895d863137adfe4949a714f21fbc70e48483c8200feacda31ec118c7543",
     "notes": [
-      "First release: rides on the watch alone, map, elevation, stops ahead, turn cues, HR strap mode."
+      "Updates itself from now on: a notification and a line on the home screen when a new version is out.",
+      "Map: your last known position in grey until the ride's first GPS fix.",
+      "Cyclone 0.19.0 on the phone tells you when the watch app is older."
     ]
   }
 }
