@@ -46,7 +46,7 @@ Huawei), Cyclone on the phone already pairs it as a heart-rate sensor: Cyclone â
 Only the Galaxy Watch5 has been tested; the others meet the requirements. Tell the tester group how it goes.
 
 **Versions**: Cyclone-Wearable carries the same version and codename as the Cyclone phone app it ships with
-(first: **0.18.0 "Vulcan"**, now **0.20.0 "Customs"**). Keep both on the same version. Sending rides from the watch to the phone and
+(first: **0.18.0 "Vulcan"**, now **0.20.0 "Ponsonby"**). Keep both on the same version. Sending rides from the watch to the phone and
 courses from the phone to the watch need Cyclone **0.18.0 or newer** on the phone; with an older Cyclone the watch
 still records and works as an HR strap.
 

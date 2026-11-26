@@ -2,12 +2,12 @@
   "latest": {
     "versionCode": 40,
     "versionName": "0.20.0",
-    "codename": "Customs",
+    "codename": "Ponsonby",
     "minSdk": 30,
     "date": "2026-11-26",
     "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.20.0/cyclone-wearable.apk",
-    "size": 7666841,
-    "sha256": "14dcf76cd0ef1a8a5369865d5adb152f97765b09eeba135d6dce4cb5ea87efd7",
+    "size": 7666845,
+    "sha256": "66b81beca2dae629dbd9f838ce392e19ee8563706837539ce07d53c6e975b12a",
     "notes": [
       "Same version as Cyclone 0.20.0, so the phone app does not ask you to update the watch. No changes on the watch."
     ]
