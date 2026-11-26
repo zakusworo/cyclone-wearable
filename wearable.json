@@ -1,17 +1,15 @@
 {
   "latest": {
-    "versionCode": 38,
-    "versionName": "0.19.0",
-    "codename": "Khyber Pass",
+    "versionCode": 40,
+    "versionName": "0.20.0",
+    "codename": "Customs",
     "minSdk": 30,
-    "date": "2026-11-22",
-    "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.19.0/cyclone-wearable.apk",
-    "size": 7666853,
-    "sha256": "4ae0e895d863137adfe4949a714f21fbc70e48483c8200feacda31ec118c7543",
+    "date": "2026-11-26",
+    "apk": "https://github.com/zakusworo/cyclone-wearable/releases/download/v0.20.0/cyclone-wearable.apk",
+    "size": 7666841,
+    "sha256": "14dcf76cd0ef1a8a5369865d5adb152f97765b09eeba135d6dce4cb5ea87efd7",
     "notes": [
-      "Updates itself from now on: a notification and a line on the home screen when a new version is out.",
-      "Map: your last known position in grey until the ride's first GPS fix.",
-      "Cyclone 0.19.0 on the phone tells you when the watch app is older."
+      "Same version as Cyclone 0.20.0, so the phone app does not ask you to update the watch. No changes on the watch."
     ]
   }
 }
